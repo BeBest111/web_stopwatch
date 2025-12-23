@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Đồng hồ bấm giờ trực tuyến miễn phí với tính năng ghi vòng, thống kê và xuất dữ liệu. Responsive, hỗ trợ dark mode.">
+    <meta name="keywords" content="stopwatch, đồng hồ bấm giờ, timer, lap time, online stopwatch">
+    <meta name="author" content="Web Stopwatch">
+    <title>Stopwatch - Đồng hồ bấm giờ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Đồng Hồ Bấm Giờ</h1>
+        
+        <div class="stopwatch-display" role="timer" aria-live="off" aria-atomic="true">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start" aria-label="Bắt đầu đồng hồ">Bắt đầu</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled aria-label="Tạm dừng đồng hồ">Tạm dừng</button>
+            <button id="resetBtn" class="btn btn-reset" aria-label="Đặt lại đồng hồ">Đặt lại</button>
+            <button id="lapBtn" class="btn btn-lap" disabled aria-label="Ghi thời gian vòng">Ghi vòng</button>
+        </div>
+        
+        <div class="lap-times">
+            <h2>Thời gian vòng</h2>
+            <div id="lapsList"></div>
+        </div>
+        
+        <div class="statistics">
+            <h2>Thống kê</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-label">Tổng vòng:</span>
+                    <span id="totalLaps" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Vòng nhanh nhất:</span>
+                    <span id="fastestLap" class="stat-value">--:--:--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Vòng chậm nhất:</span>
+                    <span id="slowestLap" class="stat-value">--:--:--</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Trung bình:</span>
+                    <span id="averageLap" class="stat-value">--:--:--</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <h2>Tính năng bổ sung</h2>
+            <div class="feature-controls">
+                <button id="exportBtn" class="btn btn-secondary">Xuất dữ liệu</button>
+                <button id="clearHistoryBtn" class="btn btn-secondary">Xóa lịch sử</button>
+                <button id="themeToggle" class="btn btn-secondary">Đổi giao diện</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
